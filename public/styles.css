@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Tan Pearl";
+    src: url("tan-pearl.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(180deg, #ffffff, #a6aabd, #6f7695, #1a203d);
+    color: #1a203d;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo h1 {
+    color: #1a203d;
+    font-size: 24px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #edf1f6;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.dropdown-menu.hidden {
+    display: none;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-link:hover {
+    background-color: #f1f1f1;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #1a203d;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #1a203d;
+    color: #edf1f6;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #1a203d;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #ffffff;
+    color: #1a203d;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.hero-text {
+    max-width: 50%;
+    color: #1a203d;
+}
+
+.hero-text h2 {
+    font-family: "Tan Pearl";
+    font-size: 36px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    padding: 15px 30px;
+    background-color: #1a203d;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero-image {
+    background-image: url("home.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Pastikan elemen ini berada di belakang semua elemen lain */
+}
+
+.hero-text,
+.get-started-btn,
+.other-buttons {
+    /* Pastikan semua elemen yang perlu berada di atas memiliki z-index lebih tinggi */
+    position: relative; /* Tambahkan z-index hanya jika dibutuhkan */
+    z-index: 1;
+    /* Properties lainnya */
+}
+
+.hero-image img {
+    display: none; /* Sembunyikan elemen gambar */
+}
+
+/* Previous CSS code remains unchanged */
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 30px;
+}
+
+.cta-box {
+    background-color: #edf1f6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    flex-basis: 45%;
+}
+
+.cta-box:hover {
+    background-color: #1a203d;
+    color: #edf1f6;
+}
+
+.connect .images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.connect .images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.connect h3,
+.read-articles h3 {
+    font-size: 28px;
+}
+
+.read-articles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.read-articles a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.read-articles a span {
+    font-size: 24px;
+    margin-left: 5px;
+    transition: margin-left 0.3s;
+}
+
+.read-articles a:hover span {
+    margin-left: 15px; /* Menambahkan efek pada tanda panah saat di-hover */
+}
+
+footer {
+    background-color: #1a2e56;
+    color: #e4dfe1;
+    padding: 30px 50px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info p,
+.social-media p,
+.footer-nav p {
+    margin: 5px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-logo h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form,
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h3,
+.signup-form h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gender-options,
+.role-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.gender-options label,
+.role-options label {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button.login1-btn,
+button.signup-btn {
+    background-color: #1a203d;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.login1-btn:hover,
+button.signup-btn:hover {
+    background-color: #6f7695;
+}
+
+.forgot-password,
+.signup-form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #1a203d;
+}
+
+.signup-form p a {
+    color: #1a203d;
+    text-decoration: none;
+}
+
+.signup-form p a:hover {
+    text-decoration: underline;
+}
+
+.signup-form label[for="newsletter"] {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.signup-form p {
+    font-size: 14px;
+    color: #1a203d;
+    margin-top: 20px;
+}
+
+.signup-form p a {
+    color: #1a203d;
+    text-decoration: none;
+}
+
+.signup-form p a:hover {
+    text-decoration: underline;
+}

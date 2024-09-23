@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Tan Pearl";
+    src: url("tan-pearl.otf");
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.auth-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.dropdown-menu.hidden {
+    display: none;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-link:hover {
+    background-color: #f1f1f1;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(180deg, #ffffff, #a6aabd, #6f7695, #1a203d);
+    color: #1a203d;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo h1 {
+    color: #1a203d;
+    font-size: 24px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    background-color: #edf1f6;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #1a203d;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #1a203d;
+    color: #edf1f6;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #1a203d;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons button:hover {
+    background-color: #ffffff;
+    color: #1a203d;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding-top: 60px; /* Jarak atas section dari elemen di atasnya, misalnya navbar */
+}
+
+.contact-us h1 {
+    text-align: center; /* Memusatkan heading "CONTACT US" */
+    font-size: 36px; /* Ukuran font untuk heading */
+    font-weight: bold; /* Membuat teks tebal */
+    margin-bottom: 20px; /* Jarak bawah heading dari subheading */
+    color: #1a203d; /* Warna teks */
+    font-family: "Tan Pearl";
+}
+
+.contact-us p {
+    text-align: center; /* Memusatkan teks subheading */
+    font-size: 18px; /* Ukuran font untuk subheading */
+    margin-bottom: 40px; /* Jarak bawah subheading dari konten lainnya */
+    color: #1a203d; /* Warna teks */
+}
+
+/* Kontainer Utama */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Memisahkan form dan informasi kontak */
+    align-items: flex-start; /* Mengatur elemen agar mulai dari bagian atas */
+    gap: 50px; /* Jarak antara form dan informasi kontak */
+    padding: 70px 20px;
+    max-width: 1200px; /* Maksimal lebar kontainer */
+    margin: 0 auto; /* Memposisikan kontainer di tengah halaman */
+}
+
+/* Kontainer Form */
+.form-container {
+    width: 100%;
+    max-width: 450px; /* Lebar maksimum form */
+    background-color: #d2d6e4;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elemen */
+.form-container form {
+    display: flex;
+    flex-direction: column; /* Mengatur elemen form secara vertikal */
+    gap: 20px; /* Memberikan jarak antar elemen form */
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%; /* Pastikan elemen form mengambil seluruh lebar kontainer */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f5f6fa;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Style ketika elemen form aktif (fokus) */
+.form-container input:focus,
+.form-container textarea:focus {
+    outline: none; /* Menghilangkan outline default */
+    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.15); /* Efek bayangan yang lebih tajam saat fokus */
+    background-color: #ffffff; /* Perubahan warna latar belakang saat fokus */
+}
+
+/* Kotak Pesan */
+.form-container textarea {
+    resize: none; /* Menghilangkan fitur resize pada textarea */
+    height: 150px; /* Mengatur tinggi textarea */
+}
+
+/* Tombol Submit */
+.form-container button {
+    padding: 15px;
+    background-color: #1a2948;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    width: 100%; /* Pastikan tombol juga mengambil seluruh lebar kontainer */
+}
+
+.form-container button:hover {
+    background-color: #333;
+}
+
+/* Informasi Kontak */
+.contact-info {
+    width: 100%;
+    max-width: 450px; /* Lebar maksimum informasi kontak */
+    text-align: left; /* Mengatur teks menjadi rata kiri */
+    color: #333;
+    margin-left: 0; /* Memastikan margin kiri adalah nol */
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: left; /* Mengatur paragraf menjadi rata kiri */
+}
+
+.contact-info strong {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1a2948;
+    text-align: left; /* Mengatur strong text menjadi rata kiri */
+}
+
+/* Media Sosial */
+.social-media a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #1a2948;
+    font-weight: bold;
+}
+/* map*/
+.map-container p {
+    font-size: 24px; /* Ukuran font untuk elemen <p> */
+    margin-bottom: 10px; /* Jarak bawah dari elemen <p> ke elemen lain */
+    color: #1a203d; /* Warna font (opsional) */
+}
+
+.map-container strong {
+    font-size: 28px; /* Ukuran font untuk elemen <strong> */
+    color: #1a203d; /* Warna font (opsional) */
+}
+
+footer {
+    background-color: #1a2e56;
+    color: #e4dfe1;
+    padding: 30px 50px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info p,
+.social-media p,
+.footer-nav p {
+    margin: 5px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-logo h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-form,
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form h3,
+.signup-form h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gender-options,
+.role-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.gender-options label,
+.role-options label {
+    margin-right: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button.login1-btn,
+button.signup-btn {
+    background-color: #1a203d;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button.login1-btn:hover,
+button.signup-btn:hover {
+    background-color: #6f7695;
+}
+
+.forgot-password,
+.signup-form p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: #1a203d;
+}
+
+.signup-form p a {
+    color: #1a203d;
+    text-decoration: none;
+}
+
+.signup-form p a:hover {
+    text-decoration: underline;
+}
+
+.signup-form label[for="newsletter"] {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.signup-form p {
+    font-size: 14px;
+    color: #1a203d;
+    margin-top: 20px;
+}
+
+.signup-form p a {
+    color: #1a203d;
+    text-decoration: none;
+}
+
+.signup-form p a:hover {
+    text-decoration: underline;
+}
